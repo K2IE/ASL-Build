@@ -3,7 +3,8 @@
 # Script to build ASL on Debian Buster (x86_64)
 #
 # Author: Scott Weis <KB2EAR>
-# Based upon a build procedure documented by Dan Srebnick <K2IE> for the 020 Digital Multiprotocol Network (http://k2ie.net)
+# Based upon a build procedure documented by Dan Srebnick <K2IE> for the 020 Digital Multiprotocol Network
+# http://k2ie.net
 # Released July 8, 2020
 #
 # Please report any issues at https://github.com/K2IE/ASL-BUILD.sh
