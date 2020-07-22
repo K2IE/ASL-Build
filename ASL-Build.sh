@@ -64,7 +64,7 @@ make distclean
 ./configure CXX=g++-4.9 CC=gcc-4.9 LDFLAGS="-zmuldefs -lasound" CFLAGS="-Wno-unused -Wno-all -Wno-int-conversion"
 make menuselect.makeopts
 #menuselect/menuselect --enable app_rpt --enable chan_beagle --enable chan_tlb --enable chan_usrp --enable chan_rtpdir --enable chan_usbradio --enable chan_simpleusb --enable chan_echolink --enable app_gps --enable chan_voter --enable radio-tune-menu --enable simpleusb-tune-menu menuselect.makeopts
-sed 's/^MENUSELECT_EXTRA_SOUNDS=/MENUSELECT_EXTRA_SOUNDS=EXTRA-SOUNDS-EN-ULAW EXTRA-SOUNDS-EN-G729/;s/MENUSELECT_CORE_SOUNDS=CORE-SOUNDS-EN-GSM/MENUSELECT_CORE_SOUNDS=CORE-SOUNDS-EN-ULAW CORE-SOUNDS-EN-GSM CORE-SOUNDS-EN-G722/;s/^MENUSELECT_ASL_SOUNDS=/MENUSELECT_ASL_SOUNDS=ASL-SOUNDS-EN-ULAW/' menuselect.makeopts > menuselect.makeopts.new
+sed 's/^MENUSELECT_EXTRA_SOUNDS=/MENUSELECT_EXTRA_SOUNDS=EXTRA-SOUNDS-EN-ULAW EXTRA-SOUNDS-EN-G729/;s/MENUSELECT_CORE_SOUNDS=CORE-SOUNDS-EN-GSM/MENUSELECT_CORE_SOUNDS=CORE-SOUNDS-EN-ULAW CORE-SOUNDS-EN-GSM CORE-SOUNDS-EN-G722/;s/^MENUSELECT_ASL_SOUNDS=/MENUSELECT_ASL_SOUNDS=ASL-SOUNDS-EN-ULAW/;s/^MENUSELECT_CFLAGS=LOADABLE_MODULES/MENUSELECT_CFLAGS=DONT_OPTIMIZE LOADABLE_MODULES/' menuselect.makeopts > menuselect.makeopts.new
 mv menuselect.makeopts.new menuselect.makeopts
 make
 make install
